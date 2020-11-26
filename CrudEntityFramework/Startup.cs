@@ -2,12 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CrudEntityFramework.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 
 namespace CrudEntityFramework
 {
@@ -23,6 +25,13 @@ namespace CrudEntityFramework
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      // Se pasa atraves de inyeccion de dependencias el "ApplicactionDBContext", que se definio en la Carpeta de Data.
+      // Se tiene que importar, es decir agregarla "using CrudEntityFramework.Data" 
+      // Se agrega el nombre de la conexion que se definio en : "appsettings.json"
+      // Para poder usar "UseSqlServer" se deben instalar las siguientes extensiones. 
+      // "Microsoft.EntityFrameworkCore.SqlServer"
+
+      services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
       services.AddControllersWithViews();
     }
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CrudEntityFramework.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace CrudEntityFramework.Data
 
     // Creando el DbSet
     // En esta aprte es donde se agregan las tablas que tiene la base de datos 
-    public DbSet<Usuario> Usuario { get; set; }
+    public DbSet<Usuario>Usuario { get; set; }
       
 
   }

@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CrudEntityFramework.Models;
+using CrudEntityFramework.Data;
 
 namespace CrudEntityFramework.Controllers
 {
   public class HomeController : Controller
   {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ApplicationDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    // Constructor
+    public HomeController(ApplicationDbContext context)
     {
-      _logger = logger;
+      // Se tednra acceso a cualquiera de las tablas que esten mapeadas en "ApplicationDbContest.cs"
+      _context = context;
     }
 
     public IActionResult Index()

@@ -31,7 +31,9 @@ namespace CrudEntityFramework
       // Para poder usar "UseSqlServer" se deben instalar las siguientes extensiones. 
       // "Microsoft.EntityFrameworkCore.SqlServer"
 
-      services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+      services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
+          Configuration.GetConnectionString("DefaultConnection")));
+
       services.AddControllersWithViews();
     }
 

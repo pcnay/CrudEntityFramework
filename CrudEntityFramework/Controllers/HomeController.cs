@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CrudEntityFramework.Models;
 using CrudEntityFramework.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CrudEntityFramework.Controllers
 {
   public class HomeController : Controller
   {
+    // Se crea esta variable
     private readonly ApplicationDbContext _context;
 
     // Constructor
@@ -21,9 +23,14 @@ namespace CrudEntityFramework.Controllers
       _context = context;
     }
 
-    public IActionResult Index()
+    // Se teclea esta palabra para indicar que tipo es "Get" porque va a retornar una tabla Regilla de tipo BootStrap.
+    //se coloca "async Task" para optimizar el desempeño de la aplicacion.
+    [HttpGet]
+
+    public async Task<IActionResult>Index()
     {
-      return View();
+      // Se agrega la libreria : Microsoft.EntityFrameworkCore;
+      return View(await _context.Usuario.ToListAsync());
     }
 
     public IActionResult Privacy()

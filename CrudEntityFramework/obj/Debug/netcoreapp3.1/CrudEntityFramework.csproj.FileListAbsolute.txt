@@ -149,3 +149,4 @@ C:\Users\2572233\Documents\programacion\CrudEntityFramework\CrudEntityFramework\
 C:\Users\2572233\Documents\programacion\CrudEntityFramework\CrudEntityFramework\CrudEntityFramework\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\2572233\Documents\programacion\CrudEntityFramework\CrudEntityFramework\CrudEntityFramework\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\2572233\Documents\programacion\CrudEntityFramework\CrudEntityFramework\CrudEntityFramework\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\2572233\Documents\programacion\CrudEntityFramework\CrudEntityFramework\CrudEntityFramework\obj\Debug\netcoreapp3.1\Razor\Views\Home\Create.cshtml.g.cs

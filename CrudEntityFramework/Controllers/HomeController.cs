@@ -33,7 +33,8 @@ namespace CrudEntityFramework.Controllers
       return View(await _context.Usuario.ToListAsync());
     }
 
-    public IActionResult Privacy()
+    [HttpGet]
+    public IActionResult Create()
     {
       return View();
     }
